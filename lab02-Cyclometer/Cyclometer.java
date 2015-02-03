@@ -42,9 +42,7 @@ public class Cyclometer{
         System.out.println("Trip 2 distance " + distanceTrip2); //prints distance of trip 2
         System.out.println("The total distance in miles: " + totalDistance); //prints total distance of trips
 
-        
 
-        
         
     }
 }
