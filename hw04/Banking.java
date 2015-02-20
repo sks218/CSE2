@@ -9,6 +9,7 @@ public class Banking{
         Scanner myScanner = new Scanner(System.in);
         double balance = (double)(Math.random()*4000)+1000;
         System.out.println("This is your bank account.\nEnter B to view your balance.\nEnter D to deposit money.\nEnter W to withdraw money. \nEnter E to exit");
+        
         while(true){
             System.out.println("B-Balance, D-Deposit, W-Withdraw, E-Exit");
             String str = myScanner.next();

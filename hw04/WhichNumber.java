@@ -15,7 +15,7 @@ public class WhichNumber{
         while(true){
             int count = 0;
             int found = 0;
-            System.out.print("is this number divisible by " + divisor[i] + " ");
+            System.out.printf("is this number divisible by %d?", divisor[i]);
             String str = myScanner.next();
             str = str.toLowerCase();
             char input = str.charAt(0);
