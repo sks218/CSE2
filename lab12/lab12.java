@@ -1,3 +1,4 @@
+
 public class lab12{
     public static int[][] increasingMatrix(int width, int height, boolean format){
         int[][] matrix = new int[height][width];
