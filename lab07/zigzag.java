@@ -24,14 +24,22 @@ public class zigzag{
                     for(int i=0; i<nStars; i++){
                         System.out.print("*");
                     }
-                    check = false;
+                    System.out.println("\nEnter y or Y to go again: ");
+                    String input = myScanner.next();
+                    if(input.equals("y") || input.equals("Y")){
+                        check = true;
+                    }
+                    else{
+                        check = false;                        
+                    }
+
                 }
                 else{
-                    System.out.println("The number is out of range [3,33]");
+                    System.out.println("The number is out of range [3,37]");
                 }
             }
             else{
-                System.out.println("Enter an integer [3,33]");
+                System.out.println("Enter an integer [3,37]");
                 myScanner.next();
             }
         }

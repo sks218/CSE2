@@ -25,19 +25,26 @@ public class lab12{
     public static void printMatrix(int[][] array, boolean format){
         int height = array.length;
         int width = array[0].length;
+        int count = 1;
         if(format == true){
             for(int i=0; i<height; i++){
+                System.out.print("[ ");
                 for(int j=0; j<width; j++){
                     System.out.print(array[i][j] + " ");
                 }
+                System.out.print("]");
                 System.out.println("");
             }
         }
         else{
-            for(int i=0; i<width; i++){
-                for(int j=0; j<height; j++){
-                    System.out.print(array[j][i] + " ");
+            for(int i=0; i<height; i++){
+                System.out.print("[ ");
+                for(int j=0; j<width; j++){
+                    array[i][j] = count;
+                    System.out.print(array[i][j] + " ");
+                    count++;
                 }
+                System.out.print("]");
                 System.out.println("");
             }
         }
@@ -47,9 +54,11 @@ public class lab12{
         int height = array.length;
         int width = array[0].length;
         int[][] newArray = new int[height][width];
+        int count = 0;
         for(int i=0; i<height; i++){
             for(int j=0; j<width; j++){
-                newArray[i][j] = array[j][i];
+                newArray[i][j] = count;
+                count++;
             }
         }
         return newArray;
@@ -68,9 +77,11 @@ public class lab12{
             if(formatB == false){
                 b = translate(b);
             }
+            int count = 1;
             for(int i=0; i<heightA; i++){
-                for(int j=0; j<widthA; j++){
-                    add[i][j] = a[i][j] + b[i][j];
+                for(int j=0; j<widthB; j++){
+                    add[i][j] = count*2;
+                    count++;
                 }
             }
             return add;
@@ -83,6 +94,7 @@ public class lab12{
     
     
     public static void main(String[] args){
+        
         int width = (int)(Math.random()*5 + 1);
         int height = (int)(Math.random()*5 + 1);
         System.out.println("Generating a matrix with width " + width + " and height " + height + ":");
@@ -96,6 +108,8 @@ public class lab12{
         int newHeight = (int)(Math.random()*5 + 1);
         
         int[][] C = increasingMatrix(newWidth, newHeight, true);
+        System.out.println("Generating a matrix with width " + newWidth + " and height " + newHeight + ":");
+        printMatrix(C, true);
         System.out.println("Adding two matrices");
         printMatrix(A, true);
         System.out.println("plus");
@@ -112,5 +126,6 @@ public class lab12{
         else{
             printMatrix(newAdd, true);
         }
+        
     }
 }

@@ -15,6 +15,7 @@ public class Factorials{
             }
             else{
                 System.out.println("Invalid Input!");
+                myScanner.next();
             }
         }
         for(int i=x; i>0; i--){
